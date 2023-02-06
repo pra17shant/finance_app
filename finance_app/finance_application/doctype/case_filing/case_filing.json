@@ -1,0 +1,643 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-02-06 12:26:46.346069",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "amended_from",
+  "case_filling_tab",
+  "customer_name",
+  "column_break_f3iok",
+  "transaction_date",
+  "section_break_qkmk4",
+  "vehicle_model",
+  "finance_company",
+  "rto",
+  "column_break_d1cdn",
+  "branch_name",
+  "insurance_company",
+  "amount_section_section",
+  "loan_amount",
+  "loan_suraksha",
+  "column_break_m4bqv",
+  "grid",
+  "total_loan",
+  "emi_section_section",
+  "irr",
+  "tenure",
+  "column_break_4hwcb",
+  "emi_date",
+  "emi_amount",
+  "charges_and_expenses_section",
+  "file_charge",
+  "krystal_file_charge",
+  "rto_charge",
+  "column_break_dksab",
+  "insurance_expence",
+  "other_charge",
+  "total_charges",
+  "net_amount_section_section",
+  "disbursement_amount",
+  "column_break_rcwjf",
+  "net_payment",
+  "settlement_section_section",
+  "pay_to_applicant",
+  "pay_to_dealer",
+  "balance_amount",
+  "column_break_5yz2u",
+  "pay_to_rc_owner",
+  "pay_to_3rd_party",
+  "note_section",
+  "remark",
+  "status",
+  "customer_detail_tab",
+  "address",
+  "customer_contact",
+  "referee_name",
+  "column_break_zybwr",
+  "guarantor_name",
+  "guarantor_contact",
+  "vehicle_detail_tab",
+  "fuel_type",
+  "vehicle_type",
+  "column_break_y1bad",
+  "transmission",
+  "abs",
+  "bank_detail_tab",
+  "branch_address",
+  "executive_name_1",
+  "executive_contact_1",
+  "executive_name_2",
+  "executive_contact_2",
+  "company_detail_tab",
+  "finance_company_section",
+  "fin_address",
+  "column_break_kcsfg",
+  "fin_contact_name",
+  "fin_contact_no",
+  "insurance_company_section",
+  "ins_address",
+  "column_break_ogqgw",
+  "ins_contact_name",
+  "ins_contact_no",
+  "rto_detail_tab",
+  "agent_name_1",
+  "agent_contact_1",
+  "column_break_fxwex",
+  "agent_name_2",
+  "agent_contact_2"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Case Filing",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "case_filling_tab",
+   "fieldtype": "Tab Break",
+   "label": "Case Filling"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_f3iok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Transaction Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_qkmk4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vehicle_model",
+   "fieldtype": "Link",
+   "label": "Vehicle Model",
+   "options": "Vehicle"
+  },
+  {
+   "fieldname": "customer_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Customer Detail"
+  },
+  {
+   "fetch_from": "customer_name.address",
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_name.customer_contact",
+   "fieldname": "customer_contact",
+   "fieldtype": "Link",
+   "label": "Customer Contact",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_name.referee_name",
+   "fieldname": "referee_name",
+   "fieldtype": "Link",
+   "label": "Referee Name",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zybwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer_name.guarantor_name",
+   "fieldname": "guarantor_name",
+   "fieldtype": "Link",
+   "label": "Guarantor Name",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer_name.guarantor_contact",
+   "fieldname": "guarantor_contact",
+   "fieldtype": "Link",
+   "label": "Guarantor Contact",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vehicle_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Vehicle Detail"
+  },
+  {
+   "fetch_from": "vehicle_model.fuel_type",
+   "fieldname": "fuel_type",
+   "fieldtype": "Link",
+   "label": "Fuel Type",
+   "options": "Vehicle",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle_model.fuel_type",
+   "fieldname": "vehicle_type",
+   "fieldtype": "Link",
+   "label": "Vehicle Type",
+   "options": "Vehicle",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_y1bad",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vehicle_model.transmission",
+   "fieldname": "transmission",
+   "fieldtype": "Link",
+   "label": "Transmission",
+   "options": "Vehicle",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle_model.abs",
+   "fieldname": "abs",
+   "fieldtype": "Link",
+   "label": "ABS",
+   "options": "Vehicle",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_d1cdn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Bank"
+  },
+  {
+   "fieldname": "bank_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Bank Detail"
+  },
+  {
+   "fetch_from": "branch_name.branch_address",
+   "fieldname": "branch_address",
+   "fieldtype": "Link",
+   "label": "Branch address",
+   "options": "Bank",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "branch_name.executive_name_1",
+   "fieldname": "executive_name_1",
+   "fieldtype": "Link",
+   "label": "Executive Name 1",
+   "options": "Bank",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "branch_name.executive_contact_1",
+   "fieldname": "executive_contact_1",
+   "fieldtype": "Link",
+   "label": "Executive Contact 1",
+   "options": "Bank",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "branch_name.executive_name_2",
+   "fieldname": "executive_name_2",
+   "fieldtype": "Link",
+   "label": "Executive Name 2",
+   "options": "Bank",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "branch_name.executive_contact_2",
+   "fieldname": "executive_contact_2",
+   "fieldtype": "Link",
+   "label": "Executive Contact 2",
+   "options": "Bank",
+   "read_only": 1
+  },
+  {
+   "fieldname": "finance_company",
+   "fieldtype": "Link",
+   "label": "Finance Company",
+   "options": "Finance Company"
+  },
+  {
+   "fieldname": "insurance_company",
+   "fieldtype": "Link",
+   "label": "Insurance Company",
+   "options": "Insurance Company"
+  },
+  {
+   "fieldname": "company_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "Company Detail"
+  },
+  {
+   "fieldname": "finance_company_section",
+   "fieldtype": "Section Break",
+   "label": "Finance Company"
+  },
+  {
+   "fetch_from": "finance_company.address",
+   "fieldname": "fin_address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Finance Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_kcsfg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "finance_company.contact_name",
+   "fieldname": "fin_contact_name",
+   "fieldtype": "Link",
+   "label": "Contact Name",
+   "options": "Finance Company",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "finance_company.contact_no",
+   "fieldname": "fin_contact_no",
+   "fieldtype": "Link",
+   "label": "Contact No.",
+   "options": "Finance Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insurance_company_section",
+   "fieldtype": "Section Break",
+   "label": "Insurance Company"
+  },
+  {
+   "fetch_from": "insurance_company.address",
+   "fieldname": "ins_address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Insurance Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ogqgw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "insurance_company.contact_name",
+   "fieldname": "ins_contact_name",
+   "fieldtype": "Link",
+   "label": "Contact Name",
+   "options": "Insurance Company",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "insurance_company.contact_no",
+   "fieldname": "ins_contact_no",
+   "fieldtype": "Link",
+   "label": "Contact No.",
+   "options": "Insurance Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rto",
+   "fieldtype": "Link",
+   "label": "RTO",
+   "options": "RTO"
+  },
+  {
+   "fieldname": "rto_detail_tab",
+   "fieldtype": "Tab Break",
+   "label": "RTO Detail"
+  },
+  {
+   "fetch_from": "rto.agent_name_1",
+   "fieldname": "agent_name_1",
+   "fieldtype": "Link",
+   "label": "Agent Name 1",
+   "options": "RTO",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "rto.agent_contact_1",
+   "fieldname": "agent_contact_1",
+   "fieldtype": "Link",
+   "label": "Agent Contact 1",
+   "options": "RTO",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fxwex",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "rto.agent_name_2",
+   "fieldname": "agent_name_2",
+   "fieldtype": "Link",
+   "label": "Agent Name 2",
+   "options": "RTO",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "rto.agent_contact_2",
+   "fieldname": "agent_contact_2",
+   "fieldtype": "Link",
+   "label": "Agent Contact 2",
+   "options": "RTO",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount_section_section",
+   "fieldtype": "Section Break",
+   "label": "Loan Section"
+  },
+  {
+   "description": "Actual Price",
+   "fieldname": "grid",
+   "fieldtype": "Float",
+   "label": "GRID",
+   "precision": "2"
+  },
+  {
+   "description": "Funding Amount",
+   "fieldname": "loan_amount",
+   "fieldtype": "Float",
+   "label": "Loan Amount",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "loan_suraksha",
+   "fieldtype": "Float",
+   "label": "Loan Suraksha",
+   "precision": "2"
+  },
+  {
+   "description": "Internal Rate of Return",
+   "fieldname": "irr",
+   "fieldtype": "Float",
+   "label": "IRR",
+   "precision": "2"
+  },
+  {
+   "default": "0",
+   "description": "Scheme (Tenure) In Month",
+   "fieldname": "tenure",
+   "fieldtype": "Int",
+   "label": "Tenure",
+   "precision": "2"
+  },
+  {
+   "fieldname": "emi_section_section",
+   "fieldtype": "Section Break",
+   "label": "EMI Section"
+  },
+  {
+   "fieldname": "column_break_m4bqv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4hwcb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "emi_amount",
+   "fieldtype": "Float",
+   "label": "EMI Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "description": "Start Cycle",
+   "fieldname": "emi_date",
+   "fieldtype": "Date",
+   "label": "EMI Date"
+  },
+  {
+   "fieldname": "charges_and_expenses_section",
+   "fieldtype": "Section Break",
+   "label": "Charges & Expenses "
+  },
+  {
+   "fieldname": "file_charge",
+   "fieldtype": "Float",
+   "label": "File Charge",
+   "precision": "2"
+  },
+  {
+   "fieldname": "krystal_file_charge",
+   "fieldtype": "Float",
+   "label": "Krystal File Charge",
+   "precision": "2"
+  },
+  {
+   "fieldname": "rto_charge",
+   "fieldtype": "Float",
+   "label": "RTO Charge",
+   "precision": "2"
+  },
+  {
+   "fieldname": "insurance_expence",
+   "fieldtype": "Float",
+   "label": "Insurance Expence",
+   "precision": "2"
+  },
+  {
+   "fieldname": "other_charge",
+   "fieldtype": "Float",
+   "label": "Other Charge",
+   "precision": "2"
+  },
+  {
+   "bold": 1,
+   "description": "RTO Charges<b>+</b>Krystal File Charges <b>+</b> Insurance Expense",
+   "fieldname": "total_charges",
+   "fieldtype": "Float",
+   "label": "Total Charges",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_amount_section_section",
+   "fieldtype": "Section Break",
+   "label": "Net Amount Section"
+  },
+  {
+   "description": "Disbursement Amount <b>-</b> Total Charges",
+   "fieldname": "net_payment",
+   "fieldtype": "Float",
+   "label": "Net Payment",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_dksab",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Disbursement amt =(Loan Suraksha + File charge)-Total Loan",
+   "fieldname": "disbursement_amount",
+   "fieldtype": "Float",
+   "label": "Disbursement Amount"
+  },
+  {
+   "fieldname": "column_break_rcwjf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "settlement_section_section",
+   "fieldtype": "Section Break",
+   "label": "Settlement Section"
+  },
+  {
+   "fieldname": "pay_to_applicant",
+   "fieldtype": "Float",
+   "label": "Pay To Applicant",
+   "precision": "2"
+  },
+  {
+   "fieldname": "pay_to_dealer",
+   "fieldtype": "Float",
+   "label": "Pay To Dealer",
+   "precision": "2"
+  },
+  {
+   "fieldname": "balance_amount",
+   "fieldtype": "Float",
+   "label": "Balance Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_5yz2u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pay_to_rc_owner",
+   "fieldtype": "Float",
+   "label": "Pay To RC Owner",
+   "precision": "2"
+  },
+  {
+   "fieldname": "pay_to_3rd_party",
+   "fieldtype": "Float",
+   "label": "Pay To 3rd Party",
+   "precision": "2"
+  },
+  {
+   "fieldname": "note_section",
+   "fieldtype": "Section Break",
+   "label": "Note"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Text Editor",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nComplete\nPending"
+  },
+  {
+   "description": "Loan Total ",
+   "fieldname": "total_loan",
+   "fieldtype": "Float",
+   "label": "Total Loan",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-02-06 16:33:52.917728",
+ "modified_by": "Administrator",
+ "module": "Finance Application",
+ "name": "Case Filing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

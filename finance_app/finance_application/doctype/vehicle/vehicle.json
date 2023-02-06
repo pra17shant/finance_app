@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:vehicle_model",
+ "creation": "2023-02-06 11:10:22.452633",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_model",
+  "fuel_type",
+  "vehicle_type",
+  "column_break_ytmia",
+  "transmission",
+  "abs"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle_model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vehicle Model",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "<b>MC 50cc:</b> Vehicles that have an engine capacity of 50cc or less than that.<br>\n<b>LMV-NT:</b> Vehicles like jeep and motor cars fall under the Light Motor Vehicle Category but these are of non-transport class.<br>\n<b>FVG:</b> Vehicles without gears fall under this category like scooters and mopeds.<br>\n<b>MC EX50CC:</b> Vehicles like motorcycles with gears whose engine capacity is of 50CC or more.<br>\n<b>MCWG:</b> Vehicles like motorcycles both with and without gear fall under this category.<br>\n<b>HGMV:</b> Vehicles like trailers, larger trucks, and other similar vehicles used for transport of goods fall under the category of HGMV.<br>\n<b>HPMV:</b> Vehicles that runs for commercial purpose and has an All India Permit to carry passengers falls under the HPMV category.",
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Vehicle Type",
+   "options": "\nMC 50cc\nLMV-NT\nFVG\nMC EX50CC\nMCWG\nHGMV\nHPMV",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "label": "Fuel Type",
+   "options": "\nPetrol\nDiesel\nLiquid Petroleum Gas (LPG)\nCompressed Natural Gas (CNG)\nGasoline\nEthanol or Methanol\nBio-Diesel\nElectric Vehicles",
+   "reqd": 1
+  },
+  {
+   "fieldname": "transmission",
+   "fieldtype": "Select",
+   "label": "Transmission",
+   "options": "\nManual\nAutomated"
+  },
+  {
+   "fieldname": "abs",
+   "fieldtype": "Select",
+   "label": "ABS",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "column_break_ytmia",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-06 11:51:18.723131",
+ "modified_by": "Administrator",
+ "module": "Finance Application",
+ "name": "Vehicle",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "vehicle_model",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "vehicle_model"
+}

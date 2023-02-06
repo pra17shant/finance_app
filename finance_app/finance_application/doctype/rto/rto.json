@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:rto_name",
+ "creation": "2023-02-06 12:16:50.911289",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rto_name",
+  "section_break_yb9zt",
+  "agent_name_1",
+  "agent_contact_1",
+  "column_break_4a2og",
+  "agent_name_2",
+  "agent_contact_2"
+ ],
+ "fields": [
+  {
+   "fieldname": "rto_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "RTO Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_yb9zt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "agent_name_1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Agent Name 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agent_contact_1",
+   "fieldtype": "Data",
+   "label": "Agent Contact 1"
+  },
+  {
+   "fieldname": "column_break_4a2og",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "agent_name_2",
+   "fieldtype": "Data",
+   "label": "Agent Name 2"
+  },
+  {
+   "fieldname": "agent_contact_2",
+   "fieldtype": "Data",
+   "label": "Agent Contact 2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-06 12:17:16.415843",
+ "modified_by": "Administrator",
+ "module": "Finance Application",
+ "name": "RTO",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
