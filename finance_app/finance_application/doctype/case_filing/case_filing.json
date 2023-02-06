@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:customer_name",
  "creation": "2023-02-06 12:26:46.346069",
  "default_view": "List",
  "doctype": "DocType",
@@ -110,7 +111,9 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Customer Name",
-   "options": "Customer"
+   "options": "Customer",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "column_break_f3iok",
@@ -142,25 +145,22 @@
   {
    "fetch_from": "customer_name.address",
    "fieldname": "address",
-   "fieldtype": "Link",
+   "fieldtype": "Small Text",
    "label": "Address",
-   "options": "Customer",
    "read_only": 1
   },
   {
    "fetch_from": "customer_name.customer_contact",
    "fieldname": "customer_contact",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Customer Contact",
-   "options": "Customer",
    "read_only": 1
   },
   {
    "fetch_from": "customer_name.referee_name",
    "fieldname": "referee_name",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Referee Name",
-   "options": "Customer",
    "read_only": 1
   },
   {
@@ -170,17 +170,15 @@
   {
    "fetch_from": "customer_name.guarantor_name",
    "fieldname": "guarantor_name",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Guarantor Name",
-   "options": "Customer",
    "read_only": 1
   },
   {
    "fetch_from": "customer_name.guarantor_contact",
    "fieldname": "guarantor_contact",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Guarantor Contact",
-   "options": "Customer",
    "read_only": 1
   },
   {
@@ -191,17 +189,15 @@
   {
    "fetch_from": "vehicle_model.fuel_type",
    "fieldname": "fuel_type",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "label": "Fuel Type",
-   "options": "Vehicle",
    "read_only": 1
   },
   {
-   "fetch_from": "vehicle_model.fuel_type",
+   "fetch_from": "vehicle_model.vehicle_type",
    "fieldname": "vehicle_type",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "label": "Vehicle Type",
-   "options": "Vehicle",
    "read_only": 1
   },
   {
@@ -211,17 +207,15 @@
   {
    "fetch_from": "vehicle_model.transmission",
    "fieldname": "transmission",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "label": "Transmission",
-   "options": "Vehicle",
    "read_only": 1
   },
   {
    "fetch_from": "vehicle_model.abs",
    "fieldname": "abs",
-   "fieldtype": "Link",
+   "fieldtype": "Select",
    "label": "ABS",
-   "options": "Vehicle",
    "read_only": 1
   },
   {
@@ -242,41 +236,36 @@
   {
    "fetch_from": "branch_name.branch_address",
    "fieldname": "branch_address",
-   "fieldtype": "Link",
+   "fieldtype": "Small Text",
    "label": "Branch address",
-   "options": "Bank",
    "read_only": 1
   },
   {
    "fetch_from": "branch_name.executive_name_1",
    "fieldname": "executive_name_1",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Executive Name 1",
-   "options": "Bank",
    "read_only": 1
   },
   {
    "fetch_from": "branch_name.executive_contact_1",
    "fieldname": "executive_contact_1",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Executive Contact 1",
-   "options": "Bank",
    "read_only": 1
   },
   {
    "fetch_from": "branch_name.executive_name_2",
    "fieldname": "executive_name_2",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Executive Name 2",
-   "options": "Bank",
    "read_only": 1
   },
   {
    "fetch_from": "branch_name.executive_contact_2",
    "fieldname": "executive_contact_2",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Executive Contact 2",
-   "options": "Bank",
    "read_only": 1
   },
   {
@@ -304,9 +293,8 @@
   {
    "fetch_from": "finance_company.address",
    "fieldname": "fin_address",
-   "fieldtype": "Link",
+   "fieldtype": "Small Text",
    "label": "Address",
-   "options": "Finance Company",
    "read_only": 1
   },
   {
@@ -316,17 +304,15 @@
   {
    "fetch_from": "finance_company.contact_name",
    "fieldname": "fin_contact_name",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Contact Name",
-   "options": "Finance Company",
    "read_only": 1
   },
   {
    "fetch_from": "finance_company.contact_no",
    "fieldname": "fin_contact_no",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Contact No.",
-   "options": "Finance Company",
    "read_only": 1
   },
   {
@@ -337,9 +323,8 @@
   {
    "fetch_from": "insurance_company.address",
    "fieldname": "ins_address",
-   "fieldtype": "Link",
+   "fieldtype": "Small Text",
    "label": "Address",
-   "options": "Insurance Company",
    "read_only": 1
   },
   {
@@ -349,17 +334,15 @@
   {
    "fetch_from": "insurance_company.contact_name",
    "fieldname": "ins_contact_name",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Contact Name",
-   "options": "Insurance Company",
    "read_only": 1
   },
   {
    "fetch_from": "insurance_company.contact_no",
    "fieldname": "ins_contact_no",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Contact No.",
-   "options": "Insurance Company",
    "read_only": 1
   },
   {
@@ -376,17 +359,15 @@
   {
    "fetch_from": "rto.agent_name_1",
    "fieldname": "agent_name_1",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Agent Name 1",
-   "options": "RTO",
    "read_only": 1
   },
   {
    "fetch_from": "rto.agent_contact_1",
    "fieldname": "agent_contact_1",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Agent Contact 1",
-   "options": "RTO",
    "read_only": 1
   },
   {
@@ -396,17 +377,15 @@
   {
    "fetch_from": "rto.agent_name_2",
    "fieldname": "agent_name_2",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Agent Name 2",
-   "options": "RTO",
    "read_only": 1
   },
   {
    "fetch_from": "rto.agent_contact_2",
    "fieldname": "agent_contact_2",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Agent Contact 2",
-   "options": "RTO",
    "read_only": 1
   },
   {
@@ -617,10 +596,11 @@
  "is_calendar_and_gantt": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-06 16:33:52.917728",
+ "modified": "2023-02-06 18:59:00.246135",
  "modified_by": "Administrator",
  "module": "Finance Application",
  "name": "Case Filing",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

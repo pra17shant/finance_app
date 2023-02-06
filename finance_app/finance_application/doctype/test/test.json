@@ -8,13 +8,14 @@
  "engine": "InnoDB",
  "field_order": [
   "customer",
-  "amended_from"
+  "amended_from",
+  "address"
  ],
  "fields": [
   {
    "fieldname": "customer",
    "fieldtype": "Link",
-   "label": "customer",
+   "label": "Customer",
    "options": "Customer"
   },
   {
@@ -25,12 +26,18 @@
    "options": "test",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fetch_from": "customer.address",
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-06 16:48:21.167384",
+ "modified": "2023-02-06 18:21:58.686175",
  "modified_by": "Administrator",
  "module": "Finance Application",
  "name": "test",
