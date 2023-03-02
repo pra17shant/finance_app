@@ -444,6 +444,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "description": "Total Loan X IRR X((1+(IRR/(12*100))^Tenure/((1+(IRR/(12*100))^Tenure-1)",
    "fieldname": "emi_amount",
    "fieldtype": "Float",
    "label": "EMI Amount",
@@ -507,21 +508,25 @@
    "label": "Net Amount Section"
   },
   {
+   "bold": 1,
    "description": "Disbursement Amount <b>-</b> Total Charges",
    "fieldname": "net_payment",
    "fieldtype": "Float",
    "label": "Net Payment",
-   "precision": "2"
+   "precision": "2",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_dksab",
    "fieldtype": "Column Break"
   },
   {
-   "description": "Disbursement amt =(Loan Suraksha + File charge)-Total Loan",
+   "bold": 1,
+   "description": "Total Loan-(Loan Suraksha + File charge)",
    "fieldname": "disbursement_amount",
    "fieldtype": "Float",
-   "label": "Disbursement Amount"
+   "label": "Disbursement Amount",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_rcwjf",
@@ -545,6 +550,7 @@
    "precision": "2"
   },
   {
+   "description": "Net Payment -[sum of (All Pay To)]",
    "fieldname": "balance_amount",
    "fieldtype": "Float",
    "label": "Balance Amount",
@@ -584,7 +590,7 @@
    "options": "\nDraft\nComplete\nPending"
   },
   {
-   "description": "Loan Total ",
+   "description": "Loan Amount + Loan Suraksha",
    "fieldname": "total_loan",
    "fieldtype": "Float",
    "label": "Total Loan",
@@ -596,7 +602,7 @@
  "is_calendar_and_gantt": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-06 18:59:00.246135",
+ "modified": "2023-02-08 18:29:00.239937",
  "modified_by": "Administrator",
  "module": "Finance Application",
  "name": "Case Filing",
