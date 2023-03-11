@@ -14,6 +14,13 @@ frappe.ui.form.on(this.frm.doctype,{
 			frappe.throw("Not Allowd to More than Net Payment Amount");
 			frm.refresh();
 		}
+		if(flt(frm.doc.irr) <= 0 || flt(frm.doc.tenure)<= 0){
+			frappe.throw("You Cannot Save Application IRR & Tenure Value = 0");
+			frm.refresh();
+		}
+	},
+	before_save(frm){
+		
 	},
 	after_save(frm){
 		//frm.set_value("status","Draft")

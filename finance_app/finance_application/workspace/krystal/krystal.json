@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"HSIPdYZwaR\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Krystal Finance Pvt. Ltd.</span>\",\"col\":12}},{\"id\":\"eDYNbDnMpq\",\"type\":\"card\",\"data\":{\"card_name\":\"Case Filing\",\"col\":4}},{\"id\":\"2n9hFirWh-\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"aytVO4fZOw\",\"type\":\"card\",\"data\":{\"card_name\":\"Customer\",\"col\":4}},{\"id\":\"fWSPxk0UYf\",\"type\":\"card\",\"data\":{\"card_name\":\"Company\",\"col\":4}},{\"id\":\"44ODZtPEme\",\"type\":\"card\",\"data\":{\"card_name\":\"Vehicle\",\"col\":4}}]",
+ "content": "[{\"id\":\"HSIPdYZwaR\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Krystal Finance Pvt. Ltd.</span>\",\"col\":12}},{\"id\":\"JjrUn_JZ19\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Case Filing\",\"col\":3}},{\"id\":\"2n9hFirWh-\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"eDYNbDnMpq\",\"type\":\"card\",\"data\":{\"card_name\":\"Case Filing\",\"col\":4}},{\"id\":\"aytVO4fZOw\",\"type\":\"card\",\"data\":{\"card_name\":\"Customer\",\"col\":4}},{\"id\":\"fWSPxk0UYf\",\"type\":\"card\",\"data\":{\"card_name\":\"Company\",\"col\":4}},{\"id\":\"44ODZtPEme\",\"type\":\"card\",\"data\":{\"card_name\":\"Vehicle\",\"col\":4}}]",
  "creation": "2023-03-11 14:18:52.604111",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -114,7 +114,7 @@
    "type": "Link"
   }
  ],
- "modified": "2023-03-11 14:37:40.829067",
+ "modified": "2023-03-11 17:40:21.710383",
  "modified_by": "Administrator",
  "module": "Finance Application",
  "name": "Krystal",
@@ -124,6 +124,16 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 1.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "Case Filing",
+   "link_to": "Case Filing",
+   "stats_filter": "{\"status\":[\"=\",\"Complete\"]}",
+   "type": "DocType"
+  }
+ ],
  "title": "Krystal"
 }
