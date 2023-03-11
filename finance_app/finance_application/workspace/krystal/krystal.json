@@ -1,0 +1,129 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"HSIPdYZwaR\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Krystal Finance Pvt. Ltd.</span>\",\"col\":12}},{\"id\":\"eDYNbDnMpq\",\"type\":\"card\",\"data\":{\"card_name\":\"Case Filing\",\"col\":4}},{\"id\":\"2n9hFirWh-\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"aytVO4fZOw\",\"type\":\"card\",\"data\":{\"card_name\":\"Customer\",\"col\":4}},{\"id\":\"fWSPxk0UYf\",\"type\":\"card\",\"data\":{\"card_name\":\"Company\",\"col\":4}},{\"id\":\"44ODZtPEme\",\"type\":\"card\",\"data\":{\"card_name\":\"Vehicle\",\"col\":4}}]",
+ "creation": "2023-03-11 14:18:52.604111",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "expenses",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Krystal",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer List",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Company",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Finance Company List",
+   "link_count": 0,
+   "link_to": "Finance Company",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Insurance Company List",
+   "link_count": 0,
+   "link_to": "Insurance Company",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bank List",
+   "link_count": 0,
+   "link_to": "Bank",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle List",
+   "link_count": 0,
+   "link_to": "Vehicle",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "RTO List",
+   "link_count": 0,
+   "link_to": "RTO",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Filing",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Case Filing List",
+   "link_count": 0,
+   "link_to": "Case Filing",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2023-03-11 14:37:40.829067",
+ "modified_by": "Administrator",
+ "module": "Finance Application",
+ "name": "Krystal",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "Krystal"
+}

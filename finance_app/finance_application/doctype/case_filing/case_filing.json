@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:customer_name",
+ "autoname": "naming_series:",
  "creation": "2023-02-06 12:26:46.346069",
  "default_view": "List",
  "doctype": "DocType",
@@ -10,16 +10,22 @@
  "field_order": [
   "amended_from",
   "case_filling_tab",
+  "naming_series",
   "customer_name",
   "column_break_f3iok",
   "transaction_date",
   "section_break_qkmk4",
+  "vehicle_no",
+  "mfg_year",
+  "column_break_uryou",
   "vehicle_model",
-  "finance_company",
   "rto",
+  "section_break_kn3ru",
+  "finance_company",
+  "insurance_company",
   "column_break_d1cdn",
   "branch_name",
-  "insurance_company",
+  "insurance_expiry",
   "amount_section_section",
   "loan_amount",
   "loan_suraksha",
@@ -51,6 +57,7 @@
   "column_break_5yz2u",
   "pay_to_rc_owner",
   "pay_to_3rd_party",
+  "paid_amount",
   "note_section",
   "remark",
   "status",
@@ -95,6 +102,7 @@
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Amended From",
    "no_copy": 1,
    "options": "Case Filing",
@@ -112,8 +120,7 @@
    "in_list_view": 1,
    "label": "Customer Name",
    "options": "Customer",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "fieldname": "column_break_f3iok",
@@ -129,7 +136,8 @@
   },
   {
    "fieldname": "section_break_qkmk4",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Vehicle & RTO Section"
   },
   {
    "fieldname": "vehicle_model",
@@ -538,18 +546,23 @@
    "label": "Settlement Section"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "pay_to_applicant",
    "fieldtype": "Float",
    "label": "Pay To Applicant",
+   "non_negative": 1,
    "precision": "2"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "pay_to_dealer",
    "fieldtype": "Float",
    "label": "Pay To Dealer",
+   "non_negative": 1,
    "precision": "2"
   },
   {
+   "allow_on_submit": 1,
    "description": "Net Payment -[sum of (All Pay To)]",
    "fieldname": "balance_amount",
    "fieldtype": "Float",
@@ -562,15 +575,19 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "pay_to_rc_owner",
    "fieldtype": "Float",
    "label": "Pay To RC Owner",
+   "non_negative": 1,
    "precision": "2"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "pay_to_3rd_party",
    "fieldtype": "Float",
    "label": "Pay To 3rd Party",
+   "non_negative": 1,
    "precision": "2"
   },
   {
@@ -584,6 +601,7 @@
    "label": "Remark"
   },
   {
+   "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
@@ -596,17 +614,56 @@
    "label": "Total Loan",
    "precision": "2",
    "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "paid_amount",
+   "fieldtype": "Float",
+   "label": "Paid Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Case ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Data",
+   "label": "Vehicle No"
+  },
+  {
+   "fieldname": "mfg_year",
+   "fieldtype": "Int",
+   "label": "MFG Year",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_uryou",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kn3ru",
+   "fieldtype": "Section Break",
+   "label": "Company Section"
+  },
+  {
+   "fieldname": "insurance_expiry",
+   "fieldtype": "Date",
+   "label": "Insurance Expiry "
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-08 18:29:00.239937",
+ "modified": "2023-03-11 16:27:47.928556",
  "modified_by": "Administrator",
  "module": "Finance Application",
  "name": "Case Filing",
- "naming_rule": "By fieldname",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

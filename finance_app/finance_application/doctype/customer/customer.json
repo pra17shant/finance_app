@@ -1,13 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:customer_name",
+ "autoname": "naming_series:",
  "creation": "2023-02-06 11:03:22.628709",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "customer_name",
   "address",
   "customer_contact",
@@ -56,15 +57,20 @@
    "fieldtype": "Data",
    "label": "Customer Contact",
    "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Customer ID"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-06 12:07:34.713115",
+ "modified": "2023-03-11 14:48:22.303402",
  "modified_by": "Administrator",
  "module": "Finance Application",
  "name": "Customer",
- "naming_rule": "By fieldname",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
